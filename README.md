@@ -2,7 +2,7 @@
 
 ### Purpose
 
-This application will take an tsv file consisting of a Google AdWords account structure and output a corresponding JSON structure.
+This application will take a tsv file consisting of a Google AdWords account structure and output a corresponding JSON structure.
 
 ### Requirements
 
@@ -25,7 +25,7 @@ To run the application with the default input.tsv file, navigate to the root of 
 npm start
 ```
 
-To run the application with a custom file, run the command with the filename argument:
+To run the application with a custom file, run the command with the --input argument:
 
 ```
 npm start --input=/path/to/filename.tsv
