@@ -1,0 +1,23 @@
+{
+  "name": "roi",
+  "version": "1.0.0",
+  "description": "ROI Interview Challenge",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.1.8",
+    "@types/yargs": "^15.0.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "csv-parse": "^4.8.5",
+    "stream-transform": "^2.0.1",
+    "yargs": "^15.1.0"
+  }
+}
