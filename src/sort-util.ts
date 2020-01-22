@@ -1,10 +1,10 @@
 import AdCampaign from './entities/AdCampaign';
 
-export function sortAlphabetically(object1: any, object2: any, field: string) {
+export const sortAlphabetically = (object1: any, object2: any, field: string) => {
   return object1[field].localeCompare(object2[field], 'en', { sensitivity: 'base' });
-}
+};
 
-export function sortCampaigns(campaigns: AdCampaign[]) {
+export const sortCampaigns = (campaigns: AdCampaign[]) => {
   campaigns.sort((a, b) => sortAlphabetically(a, b, 'name'));
   campaigns.forEach(campaign => {
     campaign.ad_groups.sort((a, b) => sortAlphabetically(a, b, 'name'));
@@ -22,4 +22,4 @@ export function sortCampaigns(campaigns: AdCampaign[]) {
       });
     });
   });
-}
+};

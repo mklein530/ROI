@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var constants_1 = require("./constants");
 exports.sortAlphabetically = function (object1, object2, field) {
     return object1[field].localeCompare(object2[field], 'en', { sensitivity: 'base' });
 };
@@ -23,8 +22,4 @@ exports.sortCampaigns = function (campaigns) {
         });
     });
 };
-exports.campaignField = function (fields) { return fields[constants_1.default.CAMPAIGN_DAILY_BUDGET]; };
-exports.adGroupField = function (fields) { return fields[constants_1.default.MAX_CPC]; };
-exports.adField = function (fields) { return fields[constants_1.default.HEADLINE]; };
-exports.keywordField = function (fields) { return fields[constants_1.default.KEYWORD]; };
-//# sourceMappingURL=util.js.map
+//# sourceMappingURL=sort-util.js.map
