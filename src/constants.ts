@@ -1,3 +1,6 @@
+/**
+ * The fields and their respective columns in the file
+ */
 export default class Columns {
   static CAMPAIGN = 0;
   static CAMPAIGN_DAILY_BUDGET = 1;

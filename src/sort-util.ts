@@ -1,9 +1,28 @@
 import AdCampaign from './entities/AdCampaign';
 
-export const sortAlphabetically = (object1: any, object2: any, field: string) => {
+/**
+ * Generic sort utility
+ * Given two objects and a field key on those objects, this will determine the alphabetical order of those objects
+ * @See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+ * @param object1
+ * @param object2
+ * @param field
+ */
+export const sortAlphabetically = (object1: any, object2: any, field: string): number => {
   return object1[field].localeCompare(object2[field], 'en', { sensitivity: 'base' });
 };
 
+/**
+ * Sorts campaigns by the following:
+ * Campaigns: sorted by name
+ * Ad Groups: sorted by name
+ * Ads: sorted by headline
+ *      if headlines are the same, sorted by description_line1
+ *      if description_line1 fields are the same, sorted by description_line2
+ * Keywords: sorted by keyword
+ *           if keywords are the same, sorted by criterion type
+ * @param campaigns
+ */
 export const sortCampaigns = (campaigns: AdCampaign[]) => {
   campaigns.sort((a, b) => sortAlphabetically(a, b, 'name'));
   campaigns.forEach(campaign => {
