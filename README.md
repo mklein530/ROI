@@ -6,8 +6,7 @@ This application will take a tsv file consisting of a Google AdWords account str
 
 ### Requirements
 
-It is recommended that this application is run with NodeJS version 10.15. It has not been tested with any other versions.
-NodeJS 10.15 can be found here https://nodejs.org/de/blog/release/v0.10.15/.
+It is recommended that this application is run with NodeJS version >= 10.15.
 
 ### Installation
 
